@@ -3,41 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Magic club Korea - Main</title>
-    <link rel="stylesheet" href="../styles/main.scss" />
+    <title>지난 이벤트</title>
+    <link rel="stylesheet" href="style.scss" />
   </head>
   <body>
     <header>
-      <a href="/templates/main.html" class="logo">
+      <a href="/main.html" class="logo">
         <div class="logo__img__container">
           <img src="/img/box_logo_only.png" />
         </div>
       </a>
 
       <div class="menu_bar">
-        <a href="/templates/introduction.html" class="span-anchor">
+        <a href="/introduction.html" class="span-anchor">
           <div class="menu-option">클럽소개</div>
         </a>
-        <a href="/templates/register.html" class="span-anchor">
+        <a href="/register.html" class="span-anchor">
           <div class="menu-option">회원 가입 안내</div>
         </a>
-        <a href="/templates/event_ongoing.html" class="span-anchor">
+        <a href="/event_ongoing.html" class="span-anchor">
           <div class="menu-option">이벤트</div>
         </a>
         <a href="#" class="span-anchor">
           <!--"http://kakaotalk" -->
           <div class="menu-option">커뮤니티</div>
         </a>
-        <a href="/templates/inquire.html" class="span-anchor">
+        <a href="/inquire.html" class="span-anchor">
           <div class="menu-option">문의 하기</div>
         </a>
-        <a href="/templates/notification.html" class="span-anchor">
+        <a href="/notification.html" class="span-anchor">
           <div class="menu-option">공지 사항</div>
         </a>
       </div>
       <a
-        class="profile__container span-anchor after_login display-none"
-        href="/templates/account.html"
+        class="profile__container span-anchor display-none"
+        href="/account.html"
       >
         <div class="profile">
           <div class="profile__img">
@@ -48,10 +48,7 @@
           </div>
         </div></a
       >
-      <a
-        class="profile__container span-anchor before_login"
-        href="/templates/login.html"
-      >
+      <a class="profile__container span-anchor" href="/login.html">
         <div class="profile">
           <div class="profile__img profile__img__login">
             <svg
@@ -70,13 +67,64 @@
           </div>
         </div></a
       >
+      <div class="__label">
+        <a href="/event_ongoing.html" class="event_anchor">
+          <span>진행중인 이벤트</span></a
+        >
+
+        <span class="page_in_now">지난 이벤트</span>
+        <button class="upload display-none">작성하기</button>
+      </div>
     </header>
 
     <main>
-      <div class="main_logo__container">
-        <img class="main_logo" src="/img/box_logo_only.png" />
+      <div class="ongoing_events">
+        <div class="event__box">
+          <div class="event__img"></div>
+          <div class="event__explain">
+            <h2 class="event__title">MAGIC CLUB</h2>
+            <h3 class="event__date">2023.02.17~18</h3>
+          </div>
+        </div>
+
+        <div class="event__box">
+          <div class="event__img"></div>
+          <div class="event__explain">
+            <h2 class="event__title">비대면 공연</h2>
+            <h3 class="event__date">2020.05.07</h3>
+          </div>
+        </div>
+
+        <div class="pagination__container">
+          <div class="pagination">
+            <svg
+              class="pagination__left-chevron display-none"
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 320 512"
+            >
+              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+              />
+            </svg>
+            <div class="page_1">1</div>
+            <svg
+              class="pagination__right-chevron display-none"
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 320 512"
+            >
+              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+              />
+            </svg>
+          </div>
+        </div>
       </div>
     </main>
+
     <footer>
       <div class="contact">
         <span class="contact__phone-number"> 대표번호: 010-1234-1234</span>
