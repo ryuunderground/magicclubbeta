@@ -85,3 +85,68 @@ header {
     height: 3rem;
   }
 }
+
+@media screen and (min-width: 300px) and (max-width: 1023px) {
+  html {
+    width: 100vw;
+  }
+  body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  header {
+    display: flex;
+    width: 100%;
+    height: 15rem;
+    justify-content: space-between;
+    border: 1px solid gray;
+    position: fixed;
+    background-color: rgba(233, 221, 207, 1);
+
+    .menu_bar,
+    .profile__container {
+      display: none;
+    }
+
+    .hamburger,
+    .profile__img__login {
+      display: flex;
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .menu_bar * {
+      display: none;
+    }
+    .profile__img__login {
+      border-radius: 30% !important;
+    }
+    .hamburger {
+      display: flex;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+      grid-area: 1/-2/2/-1;
+    }
+
+    .profile__container * {
+      display: none;
+      border: none;
+    }
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
+
+  @media screen and (max-width: 300px) {
+    .too_small {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      z-index: 99;
+      background-color: bisque;
+      font-size: 5rem;
+    }
+  }
+}
