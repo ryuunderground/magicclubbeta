@@ -68,9 +68,6 @@
       >
       <div class="__label">
         <span>문의 하기</span>
-        <button class="upload" onclick="location.href='/writing_inquire.html'">
-          문의 작성
-        </button>
       </div>
       <div class="hamburger">
         <svg
@@ -134,7 +131,63 @@
         </ul>
       </div>
     </header>
-    <main></main>
+    <main>
+      <form
+        class="gform"
+        method="POST"
+        data-email="magicclub.kr@gmail.com"
+        action="https://script.google.com/macros/s/AKfycbwm6PK-PyvCY50lWWU2-Dce6E-RXTwhjzaCJ1VbGpmeskonT_ufStaJaCzCggsJFBJp/exec"
+      >
+        <div class="form-elements">
+          <fieldset class="pure-group">
+            <label for="name">이름: </label>
+            <input id="name" name="name" placeholder="문의자님 성함" />
+          </fieldset>
+
+          <fieldset class="pure-group">
+            <label for="message">문의 내용: </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="10"
+              placeholder="문의하실 내용을 적어주세요.인스타 그램 DM은 더 빠른 답변이 가능합니다."
+            ></textarea>
+          </fieldset>
+
+          <fieldset class="pure-group">
+            <label for="email">Email: </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              value=""
+              required
+              placeholder="your.name@email.com"
+            />
+          </fieldset>
+
+          <fieldset class="pure-group honeypot-field">
+            <label for="honeypot"
+              >스팸 방지용 공란입니다.<br />
+              해당 빈칸은 비워져있어야합니다.</label
+            >
+            <input id="honeypot" type="text" name="honeypot" value="" />
+          </fieldset>
+
+          <button class="button-success pure-button button-xlarge">
+            <i class="fa fa-paper-plane"></i>&nbsp;Send
+          </button>
+        </div>
+
+        <div style="display: none" class="thankyou_message">
+          <!-- You can customize the thankyou message by editing the code below -->
+          <h2>
+            <em>감사합니다.</em> 문의 내용은 24시간 내에 응답하신 메일로
+            발송됩니다.
+          </h2>
+        </div>
+      </form>
+    </main>
     <footer>
       <div class="contact">
         <span class="contact__phone-number"> 대표번호: 010-1234-1234</span>
@@ -170,5 +223,6 @@
     </footer>
     <script src="/js/inquire.js"></script>
     <script src="/js/hamburger.js"></script>
+    <script data-cfasync="false" src="/js/email.js"></script>
   </body>
 </html>
