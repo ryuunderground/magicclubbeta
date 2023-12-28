@@ -50,3 +50,22 @@ main {
 .phone-number {
   max-width: 3rem;
 }
+
+@media screen and (min-width: 300px) and (max-width: 1023px) {
+  body {
+    width: 100vw;
+    height: auto;
+    main {
+      padding: 5rem 0 1rem 0;
+      width: 100vw;
+      .account_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: auto;
+      }
+    }
+  }
+}

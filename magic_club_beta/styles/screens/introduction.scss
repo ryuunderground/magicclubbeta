@@ -34,8 +34,6 @@ main {
       font-weight: bold;
       font-size: 3rem;
     }
-    .magic_club_korea {
-    }
   }
   .introduction__collumn:nth-child(2) {
     grid-area: 1/2/2/5;
@@ -49,5 +47,30 @@ main {
   }
   .introduction__collumn:last-child {
     grid-area: 4/1/5/4;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 1023px) {
+  body {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    box-sizing: border-box;
+    header {
+      position: absolute;
+      top: 0;
+    }
+    main {
+      padding: 5rem 0 1rem 0;
+      width: 100vw;
+      .introduction__container {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    footer {
+      position: absolute;
+      bottom: 0;
+    }
   }
 }
