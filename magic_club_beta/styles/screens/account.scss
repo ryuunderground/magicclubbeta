@@ -1,7 +1,7 @@
 @import "styles/components/reset.scss";
-@import "styles/components/header.scss";
 @import "styles/components/footer.scss";
 @import "styles/components/hamburger.scss";
+@import "styles/components/header.scss";
 
 main {
   display: flex;
@@ -18,7 +18,7 @@ main {
     background-color: white;
     border: 2px solid #331224;
     width: 50rem;
-    height: 23rem;
+    height: 20rem;
     padding: 1rem;
     gap: 1rem;
 
@@ -31,6 +31,7 @@ main {
     }
     .info__button {
       grid-area: 6/1/-1/-1;
+      height: 2.5rem;
     }
   }
   .info__container {
