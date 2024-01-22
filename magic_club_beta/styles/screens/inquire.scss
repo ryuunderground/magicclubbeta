@@ -22,7 +22,7 @@ main {
     .form-elements {
       display: grid;
       grid-template-rows: 15% repeat(5, 1fr) 10%;
-      grid-template-columns: 25% 65% 10%;
+      grid-template-columns: 25% 63% 12%;
       width: 100%;
       height: 100%;
 
@@ -71,6 +71,7 @@ main {
       }
       .button-success {
         grid-area: -2/-2/-1/-1;
+        width: 100%;
       }
     }
   }
@@ -88,24 +89,43 @@ main {
         overflow-y: auto;
 
         .form-elements {
-          display: flex;
-          flex-direction: column;
-          justify-content: start;
-          align-items: center;
-          gap: 1rem;
-          position: relative;
+          grid-template-columns: 70% 30%;
+          grid-template-rows: 5fr repeat(2, 1fr) 1.5fr 5fr 1fr;
+
+          .pure-group {
+            margin-top: 0;
+          }
+
+          .title_and_contents {
+            grid-area: 1/1/2/3;
+          }
+
+          .pure-group:nth-child(3) {
+            grid-area: 2/1/3/-1;
+          }
+
+          .within-a-day {
+            grid-area: 4/1/5/-1;
+          }
+          .pure-group:nth-child(5) {
+            grid-area: -2/1/-1/2;
+            font-weight: bold;
+            display: flex;
+            input {
+              width: 4rem;
+            }
+          }
+          .writing-inquire {
+            grid-area: 5/1/6/-1;
+            textarea {
+              height: 5rem;
+            }
+          }
           .pure-group,
           .within-a-day {
             display: inline;
             width: 100%;
             height: 1rem;
-          }
-          .pure-button {
-            position: absolute;
-            bottom: 4rem;
-            right: 0.5rem;
-            width: 7rem;
-            height: 2rem;
           }
         }
       }

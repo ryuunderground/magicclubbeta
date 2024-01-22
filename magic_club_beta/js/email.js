@@ -2,9 +2,13 @@
   // get all data in form and return object
   function getFormData(form) {
     var elements = form.elements;
+    console.log(elements);
     var honeypot;
+    console.log(elements);
+  }
+});
 
-    var fields = Object.keys(elements)
+/*var fields = Object.keys(elements)
       .filter(function (k) {
         if (elements[k].name === "honeypot") {
           honeypot = elements[k].value;
@@ -108,3 +112,4 @@
     }
   }
 })();
+*/
