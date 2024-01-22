@@ -7,7 +7,7 @@ header {
   grid-template-rows: 1fr;
   height: 5.5rem;
   position: fixed;
-  background-color: rgba(233, 221, 207, 1);
+  background-color: var(--beige);
   .logo {
     .logo__img__container {
       img {
