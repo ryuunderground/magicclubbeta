@@ -20,6 +20,7 @@ header {
   position: fixed;
   background-color: var(--beige);
   grid-area: 1/1/2/2;
+  z-index: 99;
 
   .logo {
     width: 100%;
@@ -145,4 +146,13 @@ footer {
     background-color: var(--beige);
     font-size: 5rem;
   }
+}
+
+.menu-option {
+  background-color: transparent;
+  border: none;
+  font-size: 1.3rem;
+}
+.menu-option:hover {
+  font-size: 1.5rem;
 }
