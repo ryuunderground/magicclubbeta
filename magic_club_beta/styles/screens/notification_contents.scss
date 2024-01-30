@@ -7,26 +7,26 @@ main {
   display: flex;
   grid-area: 2/1/3/-1;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  margin-top: 3rem;
   .main-content {
     display: grid;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 4rem 1fr;
     gap: 1rem;
-    width: 80%;
-    height: 80%;
+    width: 50rem;
+    height: 25rem;
     border: 5px double #331224;
     background-color: white;
     .content__title {
       display: flex;
+      height: 4rem;
       justify-content: flex-start;
       align-items: center;
       padding-left: 1.5rem;
       border-bottom: 1px solid #331224;
-      .title {
-        font-size: 2.5rem;
-        font-weight: bold;
-      }
+      font-size: 2.5rem;
+      font-weight: bold;
     }
     .content__paragraph {
       overflow-y: scroll;
@@ -37,4 +37,14 @@ main {
       min-height: 4rem;
     }
   }
+}
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.2rem;
 }
