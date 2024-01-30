@@ -1,61 +1,86 @@
 @import "styles/components/reset.scss";
 
-header {
-  display: flex;
-  width: 100%;
-  height: 5rem;
+body {
   position: relative;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
   .instagram {
     display: flex;
     position: absolute;
     left: 3rem;
-    top: 2rem;
   }
   .instagram a svg {
     width: 5rem;
     height: 5rem;
   }
-}
 
-body {
-  display: flex;
-  flex-direction: column;
-  .user-component {
+  .register__container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 1rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-top: 2rem;
 
-    .magic_club-logo {
+    .user-component {
       display: flex;
-      width: 22rem;
-    }
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 1rem;
 
-    .login-form {
-      width: 20rem;
-      display: flex;
-      flex-direction: column;
-      * {
-        margin: 0.2rem;
-        padding: 0.5rem 0.3rem;
+      .magic_club-logo {
+        display: flex;
+        width: 22rem;
       }
-      .login {
-        padding: 0.5rem 0;
-        font-size: 1.5rem;
-        font-weight: bold;
+
+      .register-form {
+        width: 20rem;
+        display: flex;
+        flex-direction: column;
+        * {
+          margin: 0.2rem;
+          padding: 0.5rem 0.3rem;
+        }
+
+        .register__phone-number {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          input {
+            width: 20%;
+          }
+          span {
+            min-width: 15%;
+          }
+        }
+
+        .register__title {
+          padding: 0.5rem 0;
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .user-component:last-child {
+      gap: 1rem;
+      span:first-child {
+        opacity: 0.7;
+      }
+      a span {
+        font-weight: 800;
+        font-size: large;
       }
     }
   }
+}
 
-  .user-component:nth-child(4) {
-    gap: 1rem;
-    span:first-child {
-      opacity: 0.7;
-    }
-    a span {
-      font-weight: 800;
-      font-size: large;
+@media screen and (min-width: 300px) and (max-width: 1023px) {
+  .instagram {
+    position: absolute;
+    .instagram a svg {
+      width: 2rem;
+      height: 2rem;
     }
   }
 }
