@@ -37,3 +37,12 @@ function openRule() {
 function openTest() {
   window.open("/templates/notification_contents.html", "_self");
 }
+function openInsta() {
+  window.open("https://www.instagram.com/magic_club.korea/", "_blank");
+}
+function openYoutube() {
+  window.open(
+    "https://youtube.com/@MagicClubKorea?si=34-iE0AoflG174rJ",
+    "_blank"
+  );
+}

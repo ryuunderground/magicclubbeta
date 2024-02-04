@@ -8,7 +8,7 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   grid-area: 2/1/3/-1;
   padding-bottom: 3rem;
 
@@ -16,7 +16,7 @@ main {
     position: relative;
     margin-top: 4%;
     width: 90%;
-    height: 60%;
+    height: 80%;
     border: 5px solid black;
 
     .prev {
@@ -50,7 +50,7 @@ main {
         justify-content: center;
         align-items: center;
         .slide__logo {
-          width: 90%;
+          max-width: 400px;
         }
       }
       .text-container {
@@ -103,5 +103,44 @@ main {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 1023px) {
+  .slideshow-container {
+    height: 95% !important;
+    display: flex;
+    justify-self: center;
+    .slide {
+      grid-template-rows: 23rem 1fr;
+      grid-template-columns: none !important;
+      .icon {
+        grid-area: 1/1/2/2;
+        display: flex;
+        justify-content: center;
+      }
+      .text-container {
+        display: grid;
+        grid-template-rows: 30% 60% !important;
+        gap: 1rem;
+        flex-wrap: wrap;
+        .intro__title {
+          font-size: 3rem !important;
+          align-items: center;
+        }
+      }
+    }
+    .chevrons {
+      margin: 1rem;
+      width: 100%;
+      z-index: 55;
+      .prev {
+        right: 6rem !important;
+      }
+
+      .next {
+        right: 0.5rem !important;
+      }
+    }
   }
 }
