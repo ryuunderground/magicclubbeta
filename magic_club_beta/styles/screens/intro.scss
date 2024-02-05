@@ -14,7 +14,7 @@ main {
 
   .slideshow-container {
     position: relative;
-    margin-top: 4%;
+    margin: 4% 0;
     width: 90%;
     height: 80%;
     border: 5px solid black;
@@ -49,8 +49,9 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
         .slide__logo {
-          max-width: 400px;
+          width: 400px;
         }
       }
       .text-container {
@@ -109,8 +110,7 @@ main {
 @media screen and (min-width: 300px) and (max-width: 1023px) {
   .slideshow-container {
     height: 95% !important;
-    display: flex;
-    justify-self: center;
+
     .slide {
       grid-template-rows: 23rem 1fr;
       grid-template-columns: none !important;

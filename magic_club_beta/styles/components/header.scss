@@ -145,7 +145,8 @@ header {
 
 .menu-option {
   font-size: 1.3rem;
+  line-height: 1.2;
 }
 .menu-option:hover {
-  font-size: 1.5rem;
+  transform: scale(1.2);
 }
