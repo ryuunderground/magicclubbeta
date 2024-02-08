@@ -22,7 +22,7 @@ function openAccount() {
   window.open("/templates/account.html", "_self");
 }
 
-function openRegitser() {
+function openRegister() {
   window.open("/templates/register.html", "_self");
 }
 
