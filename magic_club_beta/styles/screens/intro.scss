@@ -50,7 +50,9 @@ main {
       height: 100%;
 
       .icon {
+        display: flex;
         align-items: center;
+        justify-content: center;
         .slide__logo {
           width: 400px;
         }

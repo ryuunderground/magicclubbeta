@@ -1,10 +1,15 @@
+.hamburger {
+  display: none;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
 .mobile-menu {
   display: grid;
   position: fixed;
   top: 0;
   right: 0;
   height: 100%;
-  width: 140px;
+  width: 25%;
   background-color: #f0daae;
   border-left: 3px solid black;
   opacity: 0;
@@ -12,15 +17,13 @@
   padding: 20px;
   box-sizing: border-box;
   z-index: 5;
-  transform: translateX(100%);
+  transform: translate(100%);
   transition: all 0.5s ease-out;
 }
-
 .close-menu {
   cursor: pointer;
   margin-bottom: 2rem;
 }
-
 .mobile-nav-list {
   list-style: none;
   padding: 0;
@@ -28,11 +31,9 @@
 }
 .mobile-nav-list li {
   margin-bottom: 1rem;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.2rem;
-  width: 100%;
 }
-
 .too_small {
   display: none;
 }

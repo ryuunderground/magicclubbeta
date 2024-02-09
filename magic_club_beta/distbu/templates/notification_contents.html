@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Magic Club Korea - 문의 하기</title>
-    <link rel="stylesheet" href="../styles/screens/inquire.scss" />
+    <title>Magic club Korea - 공지 내용</title>
+    <link
+      rel="stylesheet"
+      href="../styles/screens/notification_contents.scss"
+    />
   </head>
   <body>
     <div class="too_small">화면이<br />너무작<br />습니다.</div>
@@ -30,13 +33,13 @@
           </button>
         </li>
         <li>
-          <button class="menu-option abtn" onclick="openNotice()">
-            공지 사항
+          <button class="menu-option abtn" onclick="openInquire()">
+            문의 하기
           </button>
         </li>
         <li>
-          <button class="menu-option abtn" onclick="openInquire()">
-            문의 하기
+          <button class="menu-option abtn" onclick="openNotice()">
+            공지 사항
           </button>
         </li>
       </ul>
@@ -70,7 +73,7 @@
         </div></a
       >
       <div class="__label">
-        <span>문의 하기</span>
+        <span>공지 사항</span>
       </div>
       <div class="hamburger">
         <svg
@@ -141,70 +144,16 @@
       </div>
     </header>
     <main>
-      <form
-        class="gform"
-        method="POST"
-        data-email="magicclub.kr@gmail.com"
-        action="https://script.google.com/macros/s/AKfycbwm6PK-PyvCY50lWWU2-Dce6E-RXTwhjzaCJ1VbGpmeskonT_ufStaJaCzCggsJFBJp/exec"
-      >
-        <div class="form-elements">
-          <div class="title_and_contents">
-            <span class="inquire__title">문의 보내기</span>
-            <p class="inquire__contents">
-              문의는 기본적으로 메일로 받고 있습니다.<br />인스타그램 DM으로
-              문의주시면 더 빠른 답변이 가능합니다.<br />인스타그램:
-              @magic_club.korea
-            </p>
-          </div>
-          <fieldset class="pure-group">
-            <label for="name">이름: </label>
-            <input id="name" name="name" placeholder="문의자님 성함" />
-          </fieldset>
-
-          <fieldset class="pure-group">
-            <label for="email">Email: </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              value=""
-              required
-              placeholder="your.name@email.com"
-            />
-          </fieldset>
-          <span class="within-a-day"
-            >문의 답변은 24시간 내에<br />적어주신 메일로 답변드립니다.</span
-          >
-          <fieldset class="pure-group honeypot-field">
-            <label for="honeypot"
-              >스팸 방지용 공란입니다. <br />해당 빈칸은
-              비워져있어야합니다.</label
-            >
-            <input id="honeypot" type="text" name="honeypot" value="" />
-          </fieldset>
-          <fieldset class="pure-group writing-inquire">
-            <label for="message">문의 내용: </label>
-            <textarea
-              id="message"
-              name="message"
-              rows="10"
-              placeholder="문의하실 내용을 적어주세요."
-            ></textarea>
-          </fieldset>
-
-          <button class="button-success pure-button button-xlarge">
-            <i class="fa fa-paper-plane"></i>&nbsp;문의 보내기
-          </button>
+      <div class="main-content">
+        <div class="content__title">
+          <span class="title">이제 누가 공지해주냐</span>
         </div>
-
-        <div style="display: none" class="thankyou_message">
-          <!-- You can customize the thankyou message by editing the code below -->
-          <h2>
-            <em>감사합니다.</em> 문의 내용은 24시간 내에 응답하신 메일로
-            발송됩니다.
-          </h2>
+        <div class="content__paragraph">
+          <p>
+            안녕정민아너를처음본순간부터좋아했어방학전에고백하고싶었는데바보같이그땐용기가없더라지금은이수많은사람들앞에서오로지너만사랑한다고말하고싶어서큰마음먹고용기내어봐매일매일버스에서너볼때마다두근댔고동아리랑과활동에서도너만보이고너생각마나고지난3월부터계속그
+          </p>
         </div>
-      </form>
+      </div>
     </main>
     <footer>
       <div class="contact">
@@ -237,6 +186,5 @@
     </footer>
     <script src="/js/hamburger.js"></script>
     <script src="/js/open.js"></script>
-    <script data-cfasync="false" src="/js/email.js"></script>
   </body>
 </html>
