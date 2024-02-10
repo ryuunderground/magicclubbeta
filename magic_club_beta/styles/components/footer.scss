@@ -35,9 +35,16 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100vw;
+    .contact {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100vw;
+    }
   }
-  footer .contact .contact__phone-number {
-    font-size: 1rem;
+  .contact__phone-number {
+    font-size: 1rem !important;
+    padding-left: 1rem;
     font-weight: 700;
   }
 }
