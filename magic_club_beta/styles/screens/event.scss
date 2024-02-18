@@ -13,18 +13,20 @@
 
 main {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   grid-area: 2/1/3/-1;
   width: 100%;
-  height: 100%;
-
-  .ongoing_events {
+  height: 70vh;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  .events {
     display: grid;
     width: 100%;
-    height: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    margin: 1rem;
     gap: 1rem;
-    grid-template-columns: 2rem repeat(5, 1fr) 2rem;
-    grid-template-rows: 3rem repeat(2, 1fr) 3rem;
 
     .event__box {
       background-color: white;
@@ -34,10 +36,10 @@ main {
       align-items: center;
       border: 3px solid black;
       .event__img {
-        width: 12rem;
-        height: 12rem;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
         margin-top: 1rem;
-        background-color: black;
       }
       .event__explain {
         display: flex;
@@ -57,12 +59,6 @@ main {
           margin-left: 0.5rem;
         }
       }
-    }
-    .event__box:nth-child(1) {
-      grid-area: 2/2/3/3;
-    }
-    .event__box:nth-child(2) {
-      grid-area: 2/3/3/4;
     }
   }
 }

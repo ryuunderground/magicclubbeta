@@ -9,40 +9,44 @@
   <body>
     <div class="too_small">화면이<br />너무작<br />습니다.</div>
     <header>
-      <a href="/templates/main.html" class="logo">
-        <div class="logo__img__container">
-          <img src="/img/mklogotp.png" />
-        </div>
-      </a>
+      <div class="upper">
+        <a href="/templates/main.html" class="logo">
+          <div class="logo__img__container">
+            <img src="/img/mklogotp.png" />
+          </div>
+        </a>
 
-      <ul class="menu_bar">
-        <li>
-          <button class="menu-option abtn" onclick="openIntro()">
-            클럽 소개
-          </button>
-        </li>
-        <li>
-          <button class="menu-option abtn" onclick="openEvent()">이벤트</button>
-        </li>
-        <li>
-          <button class="menu-option abtn" onclick="openComu()">
-            커뮤니티
-          </button>
-        </li>
-        <li>
-          <button class="menu-option abtn" onclick="openNotice()">
-            공지 사항
-          </button>
-        </li>
-        <li>
-          <button class="menu-option abtn" onclick="openInquire()">
-            문의 하기
-          </button>
-        </li>
-      </ul>
+        <ul class="menu_bar">
+          <li>
+            <button class="menu-option abtn" onclick="openIntro()">
+              클럽 소개
+            </button>
+          </li>
+          <li>
+            <button class="menu-option abtn" onclick="openEvent()">
+              이벤트
+            </button>
+          </li>
+          <li>
+            <button class="menu-option abtn" onclick="openComu()">
+              커뮤니티
+            </button>
+          </li>
+          <li>
+            <button class="menu-option abtn" onclick="openNotice()">
+              공지 사항
+            </button>
+          </li>
+          <li>
+            <button class="menu-option abtn" onclick="openInquire()">
+              문의 하기
+            </button>
+          </li>
+        </ul>
+      </div>
 
       <div class="__label">
-        <span>마이 페이지</span>
+        <span>이벤트</span>
       </div>
 
       <div class="hamburger">
@@ -106,25 +110,33 @@
         <span class="account__title">개인정보 변경하기</span>
         <div class="info__container">
           <span>이전 비밀번호</span>
-          <input type="text" class="password" />
-        </div>
-
-        <div class="info__container">
-          <span>새로운 비밀번호 확인</span>
-          <input type="text" class="password" />
+          <input required type="text" class="pre_pw" />
         </div>
         <div class="info__container">
           <span>새로운 비밀번호</span>
-          <input type="text" class="password" />
+          <input type="password" class="pw" />
+        </div>
+        <div class="info__container">
+          <span>새로운 비밀번호 확인</span>
+          <input type="password" class="pw_check" />
         </div>
         <div class="info__container">
           <span>새로운 전화번호</span>
           <div class="phone-number__container">
-            <input type="text" class="phone-number" maxlength="3" />
+            <span>010 -</span>
+            <input
+              type="text"
+              id="second_phone_number"
+              class="phone-number"
+              maxlength="4"
+            />
             <span>-</span>
-            <input type="text" class="phone-number" maxlength="4" />
-            <span>-</span>
-            <input type="text" class="phone-number" maxlength="4" />
+            <input
+              type="text"
+              id="third_phone_number"
+              class="phone-number"
+              maxlength="4"
+            />
           </div>
         </div>
         <button class="info__button">변경하기</button>
@@ -133,7 +145,10 @@
 
     <footer>
       <div class="contact">
+        <!-- 추후 정식 번호 추가하기
         <span class="contact__phone-number"> TEL: 010-6324-6912</span>
+        -->
+        <span>Social Media</span>
         <div class="contact__sns">
           <button onclick="openInsta()" class="contact__media">
             <svg
@@ -162,6 +177,7 @@
         </div>
       </div>
     </footer>
+    <script src="/js/pw_check.js"></script>
     <script src="/js/hamburger.js"></script>
     <script src="/js/open.js"></script>
   </body>

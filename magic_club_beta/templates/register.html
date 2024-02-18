@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Magic club Korea - Register</title>
+    <title>Magic club Korea - 회원가입</title>
     <link rel="stylesheet" href="../styles/screens/register.scss" />
   </head>
 
@@ -23,26 +23,17 @@
             <h2 class="register__title">회원가입</h2>
           </div>
           <input required type="text" class="username" placeholder="이름" />
-          <input required type="text" class="nickname" placeholder="닉네임" />
           <input required type="text" class="id" placeholder="아이디" />
           <input required type="password" class="pw" placeholder="비밀번호" />
           <input
             required
             type="password"
-            class="pw"
+            class="pw_check"
             placeholder="비밀번호 확인"
           />
           <div class="register__phone-number">
             <span>연락처:</span>
-            <input
-              required
-              type="text"
-              class="phone_number"
-              id="first_phone_number"
-              placeholder="010"
-              maxlength="3"
-              oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
-            />
+            <span>010</span>
             -
             <input
               required
@@ -78,6 +69,7 @@
         >
       </div>
     </div>
+    <script src="../js/pw_check.js"></script>
     <script src="../js/register.js"></script>
     <script src="../js/age_check.js"></script>
   </body>

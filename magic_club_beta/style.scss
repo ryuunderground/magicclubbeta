@@ -1,76 +1,208 @@
 @import "styles/components/reset.scss";
+@import "styles/components/header.scss";
+@import "styles/components/footer.scss";
+@import "styles/components/hamburger.scss";
 
-body {
-  position: relative;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+header {
+  top: 0;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: 2/1/3/-1;
+  padding-bottom: 3rem;
 
-  .register__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    margin-top: 2rem;
+  .slideshow-container {
+    position: relative;
+    margin: 4% 0;
+    width: 90%;
+    height: 80%;
+    border: 5px solid black;
 
-    .user-component {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 1rem;
-
-      .magic_club-logo {
-        display: flex;
-        width: 22rem;
-      }
-
-      .register-form {
-        width: 20rem;
-        display: flex;
-        flex-direction: column;
-        * {
-          margin: 0.2rem;
-          padding: 0.5rem 0.3rem;
-        }
-
-        .register__phone-number {
-          display: flex;
-          align-items: center;
-          justify-content: space-evenly;
-          input {
-            width: 20%;
-          }
-          span {
-            min-width: 15%;
-          }
-        }
-
-        .register__title {
-          padding: 0.5rem 0;
-          font-weight: bold;
-          font-size: 1.2rem;
-        }
-      }
+    .prev {
+      position: absolute;
+      font-size: 5rem;
+      right: 10rem;
+      bottom: 1rem;
     }
-    .user-component:last-child {
-      gap: 1rem;
-      span:first-child {
-        opacity: 0.7;
+
+    .next {
+      position: absolute;
+      right: 3rem;
+      bottom: 1rem;
+      font-size: 5rem;
+    }
+
+    .prev:hover,
+    .next:hover {
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+
+    .slide {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      width: 100%;
+      height: 100%;
+
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .slide__logo {
+          width: 400px;
+        }
       }
-      a span {
-        font-weight: 800;
-        font-size: large;
+      .text-container {
+        display: none;
+        grid-template-rows: 30% 30% 40%;
+        .intro__title {
+          display: none;
+          margin: 2rem;
+          font-size: 3.5rem;
+          font-weight: bold;
+        }
+        .intro__contents {
+          display: none;
+          margin: 3rem 2rem 0 2rem;
+          font-size: 1.5rem;
+          word-break: keep-all;
+        }
+        .go_to_event {
+          margin-left: 2rem;
+          display: flex;
+          height: 100%;
+          width: 100%;
+          justify-content: flex-start;
+          align-items: center;
+          .event__btn {
+            font-size: 2rem;
+
+            &:hover {
+              transform: scale(1.2);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .rdimg {
+        grid-area: 1/1/2/2;
+        width: 300px;
+        height: 300px;
+        padding: 50px;
+
+        img {
+          width: 300px;
+          height: 300px;
+          object-fit: contain;
+          display: none;
+        }
       }
     }
   }
 }
 
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media screen and (min-width: 300px) and (max-width: 1023px) {
-  .instagram {
-    position: absolute;
-    .instagram a svg {
-      width: 2rem;
-      height: 2rem;
+  body {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+    main {
+      height: 85%;
+    }
+  }
+  .slideshow-container {
+    box-sizing: border-box;
+    height: 50% !important;
+
+    .slide {
+      grid-template-rows: 200px 1fr;
+      grid-template-columns: none !important;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      gap: 1.5rem;
+      .icon {
+        grid-area: 1/1/2/2;
+        display: flex;
+        justify-self: center;
+        margin-top: 1rem;
+        .slide__logo {
+          padding: 1rem;
+          max-width: 200px;
+          max-height: 200px;
+        }
+        .rdimg {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          max-width: 200px;
+          max-height: 200px;
+          padding: 0;
+          img {
+            padding: 1rem;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .text-container {
+        display: grid;
+        grid-template-rows: 30% 50% 20% !important;
+        gap: 1rem;
+        flex-wrap: wrap;
+        position: relative;
+        .intro__title {
+          font-size: 2rem !important;
+          align-items: center;
+          word-break: keep-all;
+          margin: 0.5rem !important;
+        }
+        .intro__contents {
+          font-size: 1rem !important;
+          margin: 0.5rem !important;
+        }
+        .go_to_event {
+          justify-content: flex-end !important;
+          .event__btn {
+            margin-right: 3rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem !important;
+          }
+        }
+      }
+    }
+    .chevrons {
+      margin: 1rem;
+      width: 100%;
+      z-index: 55;
+      .prev {
+        right: 6rem !important;
+        bottom: -5rem;
+      }
+
+      .next {
+        right: 0.5rem !important;
+        bottom: -5rem;
+      }
     }
   }
 }

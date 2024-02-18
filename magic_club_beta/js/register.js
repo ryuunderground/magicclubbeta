@@ -2,8 +2,6 @@ const registerForm = document.querySelector(".register-form");
 const usernameInput = registerForm.querySelector(".username");
 const idInput = registerForm.querySelector(".id");
 const passwordInput = registerForm.querySelector(".pw");
-const nicknameInput = registerForm.querySelector(".nickname");
-const fPhoneInput = registerForm.querySelector("#first_phone_number");
 const sPhoneInput = registerForm.querySelector("#second_phone_number");
 const tPhoneInput = registerForm.querySelector("#third_phone_number");
 const registerBtn = document.querySelector(".register__btn");
@@ -12,8 +10,6 @@ function submitRegister(event) {
   const username = usernameInput.value;
   const id = idInput.value;
   const password = passwordInput.value;
-  const nickname = nicknameInput.value;
-  const fPhone = fPhoneInput.value;
   const sPhone = sPhoneInput.value;
   const tPhone = tPhoneInput.value;
 
@@ -31,10 +27,8 @@ function submitRegister(event) {
     // 새로운 게시물 객체 생성
     const newAccount = {
       name: username,
-      nickname: nickname,
       id: id,
       password: password,
-      phone_1: fPhone,
       phone_2: sPhone,
       phone_3: tPhone,
     };
@@ -50,4 +44,5 @@ function submitRegister(event) {
     window.alert("회원 가입이 완료되었습니다.");
   }
 }
+
 registerBtn.addEventListener("click", submitRegister);
